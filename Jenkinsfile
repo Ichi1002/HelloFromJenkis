@@ -7,14 +7,14 @@ node {
   stage("Clone the project") {
     git branch: 'main', url: 'https://github.com/nkchauhan003/jenkins-demo.git'
   }
-
+stage("Which mvn") {
+      sh "./mvnw -v"
+    }
   stage("Compilation") {
     sh "./mvnw clean install -DskipTests"
   }
 
-  stage("Which mvn") {
-      sh "./mvnw -v"
-    }
+
 
   stage("Tests and Deployment") {
     stage("Runing unit tests") {
