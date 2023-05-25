@@ -9,10 +9,6 @@ agent any
     git branch: 'main', url: 'https://github.com/nkchauhan003/jenkins-demo.git'
   }
 
-  stage("Wich mvn") {
-    sh './mvnw -v'
-  }
-
   stage("Compilation") {
     sh "./mvnw clean install -DskipTests"
   }
