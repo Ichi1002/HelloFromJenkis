@@ -45,7 +45,7 @@
 				<configuration>
 					<source>11</source>
 					<target>11</target>
-<!--					<release>11</release>  &lt;!&ndash;or <release>10</release>&ndash;&gt;-->
+					<release>11</release>  <!--or <release>10</release>-->
 				</configuration>
 			</plugin>
 		</plugins>
