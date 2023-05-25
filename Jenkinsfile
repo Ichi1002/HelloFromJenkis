@@ -1,11 +1,10 @@
 node {
   stage('Which Java?') {
-
                 sh 'which java'
   }
 
   stage("Clone the project") {
-    git branch: 'main', url: 'https://github.com/Ichi1002/HelloFromJenkis'
+    git branch: 'master', url: 'https://github.com/Ichi1002/HelloFromJenkis'
   }
 stage("Which mvn") {
       sh "./mvnw -v"
