@@ -1,10 +1,4 @@
 node {
-
-buildPack: maven-java11
-pipelineConfig:
-  agent:
-    image: maven-java11
-
   stage('Which Java?') {
 
                 sh 'which java'
