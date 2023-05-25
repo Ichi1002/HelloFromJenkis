@@ -7,7 +7,7 @@ node {
 
  stage('Which Class Patch?') {
 
-                sh 'JAVA_HOME'
+                sh 'echo $ {CLASSPATH}'
   }
 
 
