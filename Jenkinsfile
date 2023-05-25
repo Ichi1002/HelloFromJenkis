@@ -12,6 +12,10 @@ node {
     sh "./mvnw clean install -DskipTests"
   }
 
+  stage("Which mvn") {
+      sh "./mvnw -v"
+    }
+
   stage("Tests and Deployment") {
     stage("Runing unit tests") {
       sh "./mvnw test -Punit"
