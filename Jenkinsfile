@@ -6,9 +6,7 @@ node {
   stage("Clone the project") {
     git branch: 'master', url: 'https://github.com/Ichi1002/HelloFromJenkis'
   }
-stage("Which mvn") {
-      sh "./mvnw -v"
-    }
+
   stage("Compilation") {
     sh "./mvnw clean install -DskipTests"
   }
