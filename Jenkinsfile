@@ -1,7 +1,7 @@
 node {
   stage('Which Java?') {
 
-                sh 'java --version'
+                sh 'which java'
   }
 
   stage("Clone the project") {
