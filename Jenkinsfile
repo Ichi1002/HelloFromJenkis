@@ -7,7 +7,7 @@ node {
 
  stage('Which Class Patch?') {
 
-                sh 'echo %JAVA_HOME%'
+                sh 'mvn -version'
   }
 
 
