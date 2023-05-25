@@ -1,8 +1,7 @@
 node {
-agent any
-
   stage('Which Java?') {
-        sh 'java --version'
+
+                sh 'java --version'
   }
 
   stage("Clone the project") {
