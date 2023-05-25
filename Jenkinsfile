@@ -5,12 +5,6 @@ node {
                 sh 'java --version'
   }
 
- stage('Which Class Patch?') {
-
-                sh 'mvn -version'
-  }
-
-
   stage("Clone the project") {
     git branch: 'main', url: 'https://github.com/nkchauhan003/jenkins-demo.git'
   }
