@@ -1,20 +1,16 @@
 node {
-agent {
-        docker {
-            image 'maven:3.9.0-eclipse-temurin-11'
-            args '-v /root/.m2:/root/.m2'
-        }
-    }
+agent any
 
   stage('Which Java?') {
-
-                sh 'java --version'
+        sh 'java --version'
   }
 
   stage("Clone the project") {
     git branch: 'main', url: 'https://github.com/nkchauhan003/jenkins-demo.git'
   }
-
+stage("Wich mvn") {
+    sh "./mvnw -v"
+  }
   stage("Compilation") {
     sh "./mvnw clean install -DskipTests"
   }
