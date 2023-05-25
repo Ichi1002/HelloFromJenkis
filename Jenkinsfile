@@ -1,7 +1,7 @@
 node {
   stage('Which Java?') {
 
-                sh 'which java'
+                sh 'where java'
   }
 
   stage("Clone the project") {
@@ -11,7 +11,7 @@ stage("Which mvn") {
       sh "./mvnw -v"
     }
   stage("Compilation") {
-    sh "./mvnw clean install -X -DskipTests"
+    sh "./mvnw clean install -DskipTests"
   }
 
 
