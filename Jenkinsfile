@@ -11,7 +11,7 @@ stage("Which mvn") {
       sh "./mvnw -v"
     }
   stage("Compilation") {
-    sh "./mvnw clean install -DskipTests"
+    sh "./mvnw clean install -X -DskipTests"
   }
 
 
