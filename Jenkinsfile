@@ -23,16 +23,17 @@ pipeline  {
     steps {
     sh "mvn clean install -DskipTests"
   }}
+  }
 
 
 
-  stage("Tests and Deployment") {
+  stages("Tests and Deployment") {
     stage("Runing unit tests") {
-     steps {
+    steps {
       sh "./mvnw test -Punit"
     }}
-     steps {
     stage("Deployment") {
+    steps {
       sh 'nohup ./mvnw spring-boot:run -Dserver.port=8001 &'
     }}
   }
