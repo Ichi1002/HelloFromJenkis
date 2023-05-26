@@ -1,7 +1,15 @@
 node {
+  agent any
+      tools {
+          maven 'Maven 3.9.2'
+      }
   stage('Which Java?') {
-                sh 'which java'
+                sh 'java -version'
   }
+
+  stage('Which mvn?') {
+                  sh 'mvn -version'
+    }
 
   stage("Clone the project") {
     git branch: 'master', url: 'https://github.com/Ichi1002/HelloFromJenkis'
