@@ -1,4 +1,4 @@
-node {
+pipeline  {
   agent any
       tools {
           maven 'Maven 3.9.2'
@@ -6,8 +6,6 @@ node {
   stage('Which Java?') {
                 sh 'java -version'
   }
-
-
 
   stage("Clone the project") {
     git branch: 'master', url: 'https://github.com/Ichi1002/HelloFromJenkis'
