@@ -3,7 +3,7 @@ pipeline  {
       tools {
           maven 'Maven 3.9.2'
       }
-      stages{}
+      stages{
   stage('Which Java?') {
                 sh 'java -version'
   }
@@ -26,4 +26,4 @@ pipeline  {
       sh 'nohup ./mvnw spring-boot:run -Dserver.port=8001 &'
     }
   }
-  }
+  }}
