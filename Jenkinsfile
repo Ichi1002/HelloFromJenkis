@@ -31,10 +31,13 @@ pipeline  {
         steps {
             sh 'nohup mvn spring-boot:run -Dserver.port=8001 &'
         }
+    }
+    stage("TestAPi") {
         steps{
             sh 'curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:8001/greet'
         }
     }
+
 
 }
 }
