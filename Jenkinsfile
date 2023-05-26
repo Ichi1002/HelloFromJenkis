@@ -6,10 +6,8 @@ pipeline  {
   stages{
     stage('Which Java and mvn?') {
          steps {
-            sh ''''
-                java -version
-                mvn -version
-                '''
+            sh 'java -version'
+
          }
     }
 
