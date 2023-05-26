@@ -29,7 +29,7 @@ pipeline  {
     }
     stage("Deployment") {
         steps {
-            sh 'nohup mvn spring-boot:run -Dserver.port=8001 &'
+            sh 'nohup mvn spring-boot:run &'
         }
     }
 
