@@ -24,12 +24,12 @@ pipeline  {
     }
     stage("Runing unit tests") {
         steps {
-            sh "./mvnw test -Punit"
+            sh "mvn test -Punit"
         }
     }
     stage("Deployment") {
         steps {
-            sh 'nohup ./mvnw spring-boot:run -Dserver.port=8001 &'
+            sh 'nohup mvn spring-boot:run -Dserver.port=8001 &'
         }
     }
 
