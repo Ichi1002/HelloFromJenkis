@@ -32,7 +32,7 @@ pipeline  {
             sh 'nohup mvn spring-boot:run -Dserver.port=8001 &'
         }
         }
-    stage("Deployment") {
+    stage("Deployment11") {
         steps{
           sh 'cd target && java -jar Gretting-0.0.1-SNAPSHOT.jar'
         }
