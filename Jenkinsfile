@@ -34,7 +34,14 @@ pipeline  {
     }
     stage("TestAPi") {
         steps{
-            sh 'pwd'
+        step{
+          sh 'cd /target'
+        }
+
+        step{
+            sh 'java -jar Gretting-0.0.1-SNAPSHOT.jar'
+                }
+
         }
     }
 
