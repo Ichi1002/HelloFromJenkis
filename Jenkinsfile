@@ -34,7 +34,7 @@ pipeline  {
 //         }
     stage("Deployment") {
         steps{
-          sh 'nohup cd target && java -jar Gretting-0.0.1-SNAPSHOT.jar'
+          sh 'cd target && nohup java -jar Gretting-0.0.1-SNAPSHOT.jar'
         }
         }
     }
