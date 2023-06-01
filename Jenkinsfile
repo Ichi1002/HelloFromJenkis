@@ -34,18 +34,15 @@ pipeline  {
     }
     stage("Tes") {
         steps{
-
           sh 'cd /target'
         }
-        stage("Tes12") {
-
+    stage("Tes12") {
         steps{
             sh 'java -jar Gretting-0.0.1-SNAPSHOT.jar'
-                }
+            }
 
         }
     }
 
 
-}
 }
