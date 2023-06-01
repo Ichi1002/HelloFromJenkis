@@ -34,7 +34,7 @@ pipeline  {
     }
     stage("TestAPi") {
         steps{
-            sh 'curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:8001/greet'
+            sh 'pwd'
         }
     }
 
