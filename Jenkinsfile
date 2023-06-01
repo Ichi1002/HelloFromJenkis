@@ -35,13 +35,8 @@ pipeline  {
     stage("Tes") {
         steps{
           sh 'cd target'
+          sh 'ls'
         }
-        }
-    stage("Tes12") {
-        steps{
-            sh 'ls'
-            }
-
         }
     }
 }
