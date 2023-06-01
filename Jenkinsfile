@@ -34,8 +34,7 @@ pipeline  {
         }
     stage("Tes") {
         steps{
-          sh 'cd target'
-          sh 'ls'
+          sh 'cd target && java -jar Gretting-0.0.1-SNAPSHOT.jar'
         }
         }
     }
