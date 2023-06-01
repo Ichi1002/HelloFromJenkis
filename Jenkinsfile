@@ -39,7 +39,7 @@ pipeline  {
         }
     stage("Tes12") {
         steps{
-            sh 'java -jar Gretting-0.0.1-SNAPSHOT.jar'
+            sh 'ls -l Gretting-0.0.1-SNAPSHOT.jar'
             }
 
         }
